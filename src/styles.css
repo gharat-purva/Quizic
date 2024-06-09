@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.min-h-screen {
+  min-height: 100vh;
+}
+
+.bg-gray-800 {
+  background-color: #1a202c;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: calc(100% - 4rem); /* Adjust width to accommodate header */
+  margin-left: 4rem; /* Adjust for header width */
+}
+
+.quiz-card {
+  max-width: 600px;
+  width: 100%;
+  padding: 2rem;
+  background-color: #2d3748;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.question {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.options-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.option-button {
+  background-color: #4a5568;
+  color: #fff;
+  font-weight: bold;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.3s ease;
+}
+
+.option-button:hover {
+  background-color: #718096;
+}
