@@ -1,0 +1,28 @@
+[
+    {
+      "question": "If a complex machine is coded with the instruction: 'If the first input is not greater than the second input, then reverse the process unless the third input is active,' which scenario will trigger the reverse process?",
+      "options": ["First input is 5, second input is 10, third input is inactive", "First input is 10, second input is 5, third input is active", "First input is 5, second input is 5, third input is inactive", "First input is 10, second input is 10, third input is inactive"],
+      "correctAnswer": "First input is 5, second input is 5, third input is inactive"
+    },
+    {
+      "question": "Given the statements: 'All philosophers are thinkers,' 'Some thinkers are brilliant,' and 'No philosophers are boring,' which conclusion is logically valid?",
+      "options": ["Some philosophers are brilliant", "All thinkers are boring", "No thinkers are brilliant", "Some thinkers are not boring"],
+      "correctAnswer": "Some thinkers are not boring"
+    },
+    {
+      "question": "In a code language, 'A1B2C3' means 'HELLO', and 'D4E5F6' means 'WORLD'. How would you code 'LOVELY'?",
+      "options": ["C3B2A1B2C3", "A1B2D4E5C3", "B2A1E5F6A1", "E5A1B2F6E5"],
+      "correctAnswer": "B2A1E5F6A1"
+    },
+    {
+      "question": "",
+      "options": ["", "", "", ""],
+      "correctAnswer": ""
+    },
+    {
+      "question": "Apartments in the Riverdale Manor cost less than apartments in The Gaslight Commons. Apartments in the Livingston Gate cost more than apartments in the The Gaslight Commons. Of the three apartment buildings, the Livingston Gate costs the most. If the first two statements are true, the third statement is",
+      "options": ["true", "false", "uncertain", "No thinkers are brilliant"],
+      "correctAnswer": "true"
+    }
+  ]
+  

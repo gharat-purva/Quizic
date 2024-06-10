@@ -1,70 +1,39 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
+import Quizic from './Quizic';
+import Header from './components/Header';
 import './styles.css';
-import Header from './Header';
 
-const Quizic = () => {
-  const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [score, setScore] = useState(0);
-  const [questions, setQuestions] = useState([]);
-
-  useEffect(() => {
-    fetchQuestions();
-  }, []);
-
-  const fetchQuestions = async () => {
-    try {
-      const response = await fetch('questions.json');
-      if (!response.ok) {
-        throw new Error('Failed to fetch questions');
-      }
-      const data = await response.json();
-      setQuestions(data);
-    } catch (error) {
-      console.error('Error fetching questions:', error);
-    }
-  };
-
-  const handleAnswer = (selectedOption) => {
-    if (selectedOption === questions[currentQuestion]?.correctAnswer) {
-      setScore(score + 1);
-    }
-    if (currentQuestion < questions.length - 1) {
-      setCurrentQuestion(currentQuestion + 1);
-    } else {
-      setCurrentQuestion(-1);
-    }
-  };
-
+const App = () => {
   return (
-    <div className="relative min-h-screen bg-gray-800 text-slate-100">
-      <Header />
-      <div className="container flex justify-center items-center">
-        <div className="quiz-card">
-          {questions.length > 0 && currentQuestion !== -1 ? (
-            <>
-              <p className="question">{questions[currentQuestion].question}</p>
-              <div className="options-grid">
-                {questions[currentQuestion].options.map((option, index) => (
-                  <button
-                    key={index}
-                    className="option-button"
-                    onClick={() => handleAnswer(option)}
-                  >
-                    {option}
-                  </button>
-                ))}
-              </div>
-            </>
-          ) : (
-            <div>
-              <p className="text-lg">Quiz completed! Your score is {score}/{questions.length}</p>
-              <button onClick={() => setCurrentQuestion(0)}>Restart Quiz</button>
-            </div>
-          )}
+    <Router>
+      <div className="container">
+        <Header />
+        <div className="content">
+          <div className="navigation">
+            <nav>
+              <ul className="horizontal-nav">
+                <li><Link to="/math">Math</Link></li>
+                <li><Link to="/logic">Logic</Link></li>
+                <li><Link to="/verbal">Verbal</Link></li>
+                <li><Link to="/spatial">Spatial</Link></li>
+                <li><Link to="/memory">Memory</Link></li>
+              </ul>
+            </nav>
+          </div>
+          <div className="quiz-area">
+            <Routes>
+              <Route path="/math" element={<Quizic dataFile="/math-questions.json" />} />
+              <Route path="/logic" element={<Quizic dataFile="/logic-questions.json" />} />
+              <Route path="/verbal" element={<Quizic dataFile="/verbal-questions.json" />} />
+              <Route path="/spatial" element={<Quizic dataFile="/spatial-questions.json" />} />
+              <Route path="/memory" element={<Quizic dataFile="/memory-questions.json" />} />
+            </Routes>
+          </div>
         </div>
       </div>
-    </div>
+    </Router>
   );
 };
 
-export default Quizic;
+export default App;

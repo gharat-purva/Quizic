@@ -1,0 +1,18 @@
+[
+    {
+      "question": "Choose the correct word to complete the sentence: The professor's lecture was so ______ that it was difficult to stay awake.",
+      "options": ["tedious", "lucid", "animated", "coherent"],
+      "correctAnswer": "tedious"
+    },
+    {
+      "question": "What is the meaning of the word 'obfuscate'?",
+      "options": ["To clarify", "To confuse", "To simplify", "To reveal"],
+      "correctAnswer": "To confuse"
+    },
+    {
+      "question": "Which of the following sentences uses the word 'ineffable' correctly?",
+      "options": ["The ineffable beauty of the sunset left us speechless.", "She gave an ineffable explanation of the process.", "He was ineffable at solving complex problems.", "The ineffable noise made it hard to concentrate."],
+      "correctAnswer": "The ineffable beauty of the sunset left us speechless."
+    }
+  ]
+  

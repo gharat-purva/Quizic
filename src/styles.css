@@ -2,28 +2,83 @@
 @tailwind components;
 @tailwind utilities;
 
-.min-h-screen {
-  min-height: 100vh;
-}
-
-.bg-gray-800 {
-  background-color: #1a202c;
+body {
+  @apply bg-gray-100 text-gray-900;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
 }
 
 .container {
   display: flex;
+  height: 100vh;
+  background-color: #f7fafc;
+  color: #2d3748;
+}
+
+.header {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-family: 'Playfair Display', serif;
+  color: #2d3748;
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  padding: 1rem;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-left: 4rem;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.navigation {
+  width: 100%;
+  background-color: #edf2f7;
+  padding: 1rem;
+}
+
+.horizontal-nav {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.horizontal-nav li {
+  margin: 0;
+}
+
+.horizontal-nav li a {
+  color: #2d3748;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.horizontal-nav li a:hover {
+  color: #4a5568;
+}
+
+.quiz-area {
+  flex: 1;
+  display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  width: calc(100% - 4rem); /* Adjust width to accommodate header */
-  margin-left: 4rem; /* Adjust for header width */
+  padding: 2rem;
 }
 
 .quiz-card {
   max-width: 600px;
   width: 100%;
   padding: 2rem;
-  background-color: #2d3748;
+  background-color: #ffffff;
   border-radius: 0.5rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -41,8 +96,8 @@
 }
 
 .option-button {
-  background-color: #4a5568;
-  color: #fff;
+  background-color: #e2e8f0;
+  color: #2d3748;
   font-weight: bold;
   padding: 1rem;
   border-radius: 0.25rem;
@@ -50,5 +105,24 @@
 }
 
 .option-button:hover {
-  background-color: #718096;
+  background-color: #cbd5e0;
+}
+
+@media (max-width: 768px) {
+  .header {
+    display: none;
+  }
+  
+  .content {
+    margin-left: 0;
+  }
+  
+  .horizontal-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .quiz-card {
+    padding: 1rem;
+  }
 }

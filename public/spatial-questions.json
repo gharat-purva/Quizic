@@ -1,0 +1,18 @@
+[
+    {
+      "question": "If a cube is painted on all six faces and then cut into 64 smaller cubes of equal size, how many of the smaller cubes will have exactly one face painted?",
+      "options": ["8", "12", "24", "32"],
+      "correctAnswer": "24"
+    },
+    {
+      "question": "Which of the following 3D shapes can be unfolded into a cross-shaped net?",
+      "options": ["Cube", "Tetrahedron", "Octahedron", "Dodecahedron"],
+      "correctAnswer": "Cube"
+    },
+    {
+      "question": "A piece of paper is folded in half three times. If a single straight cut is made through all the layers and the paper is then unfolded, how many separate pieces will there be?",
+      "options": ["6", "8", "12", "16"],
+      "correctAnswer": "8"
+    }
+  ]
+  
